@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import driver1 from "../assets/driver1.png";
 import { useWindowSize } from "react-use";
@@ -5,7 +6,7 @@ import Card from "./components/card";
 
 const dummyArray = ["order1", "order2", "order3", "order4"];
 
-const user = () => {
+const User = () => {
   const { width } = useWindowSize();
 
   if (width > 430) {
@@ -54,4 +55,4 @@ const user = () => {
   );
 };
 
-export default user;
+export default User;

@@ -1,9 +1,10 @@
+'use client';
 import Image from "next/image";
 import user1 from "../assets/user1.png";
 import { useWindowSize } from "react-use";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
-const user = () => {
+const User = () => {
   const { width } = useWindowSize();
   const router = useRouter();
 
@@ -62,4 +63,4 @@ const user = () => {
   );
 };
 
-export default user;
+export default User;

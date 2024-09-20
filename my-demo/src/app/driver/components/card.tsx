@@ -1,7 +1,12 @@
-import { useRouter } from "next/router";
+'use client';
+import { useRouter } from "next/navigation";
 import React from "react";
 
-const Card = ({ order }: any) => {
+interface IOrder {
+  order:string
+}
+
+const Card = ({ order }: IOrder) => {
   console.log(order);
   const router = useRouter();
 
