@@ -38,7 +38,7 @@ const User = () => {
             className="max-w-[390px]"
           />
           <button
-            className="absolute bottom-12 left-3 text-black border rounded-full py-3 px-[162px] bg-green-500"
+            className="absolute bottom-12 left-3 text-black border rounded-full py-4 px-[162px] bg-green-500"
             onClick={() => router.push("/user2")}
           >
             Book
@@ -52,7 +52,7 @@ const User = () => {
             className="max-w-[430px]"
           />
           <button
-            className="absolute bottom-14 left-4 text-[18px] text-black border rounded-full py-4 px-[180px] bg-green-500"
+            className="absolute bottom-12 left-4 text-[18px] text-black border rounded-full py-4 px-[180px] bg-green-500"
             onClick={() => router.push("/user2")}
           >
             Book
