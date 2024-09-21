@@ -21,7 +21,7 @@ const User = () => {
             className="relative left-4 bottom-28  text-black border rounded-full py-5 px-40 bg-orange-500"
             onClick={() => router.push("/user2")}
           >
-            book
+            Book
           </button>
         </div>
       </div>
@@ -38,10 +38,10 @@ const User = () => {
             className="max-w-[390px]"
           />
           <button
-            className="absolute bottom-14 left-3 text-black border rounded-full py-4 px-40 bg-orange-500"
+            className="absolute bottom-12 left-3 text-black border rounded-full py-3 px-[162px] bg-green-500"
             onClick={() => router.push("/user2")}
           >
-            book
+            Book
           </button>
         </div>
       ) : (
@@ -52,10 +52,10 @@ const User = () => {
             className="max-w-[430px]"
           />
           <button
-            className="absolute bottom-16 left-4 text-black border rounded-full py-6 px-44 bg-orange-500"
+            className="absolute bottom-14 left-4 text-[18px] text-black border rounded-full py-4 px-[180px] bg-green-500"
             onClick={() => router.push("/user2")}
           >
-            book
+            Book
           </button>
         </div>
       )}
