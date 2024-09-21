@@ -2,6 +2,11 @@ import type { Metadata, Viewport } from "next";
 
 import localFont from "next/font/local";
 import "./globals.css";
+import {
+  ReversifiProvider,
+  EthereumWalletConnectors,
+  ZeroDevSmartWalletConnectors,
+} from "reversifi-sdk";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -13,7 +18,6 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
-
 
 const APP_NAME = "Grab";
 const APP_DEFAULT_TITLE = "Grab";
@@ -70,7 +74,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ReversifiProvider
+          settings={{
+            environmentId: "44ad3403-5f19-440d-9a53-890eaa6246e6",
+            walletConnectors: [
+              EthereumWalletConnectors,
+              ZeroDevSmartWalletConnectors,
+            ],
+          }}
+        >
+          {children}
+        </ReversifiProvider>
       </body>
     </html>
   );

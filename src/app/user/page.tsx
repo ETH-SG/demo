@@ -1,12 +1,24 @@
-'use client';
+"use client";
+
 import Image from "next/image";
 import user1 from "../assets/user1.png";
 import { useWindowSize } from "react-use";
 import { useRouter } from "next/navigation";
+import {
+  ReversifiWidget,
+  useReversifiContext,
+  getAllEscrow,
+} from "reversifi-sdk";
 
 const User = () => {
   const { width } = useWindowSize();
   const router = useRouter();
+  const primaryWallet = useReversifiContext();
+
+  // async function test() {
+  // console.log(getSigner(primaryWallet));
+  // console.log(getAllEscrow(primaryWallet));
+  // }
 
   if (width > 430) {
     return (
@@ -17,9 +29,10 @@ const User = () => {
             alt="Picture of the author"
             className="max-w-[390px]"
           />
+          <ReversifiWidget />
           <button
             className="relative left-4 bottom-28  text-black border rounded-full py-5 px-40 bg-green-500"
-            onClick={() => router.push("/user2")}
+            onClick={() => getAllEscrow(primaryWallet.primaryWallet)}
           >
             Book
           </button>
