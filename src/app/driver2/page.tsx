@@ -17,7 +17,7 @@ export default function Home() {
             alt="Picture of the author"
             className="max-w-[390px]"
           />
-          <button className="relative bottom-[7.5rem] left-3 text-black border rounded-full py-5 px-40 bg-orange-500"
+          <button className="relative bottom-[6.5rem] left-3 text-black border rounded-full py-5 px-40 bg-green-500 justify-center"
           onClick={()=> router.push('/driver')}>
             Arrive
           </button>
@@ -35,9 +35,10 @@ export default function Home() {
             alt="Picture of the author"
             className="max-w-[390px]"
           />
-          {/* <button className="absolute bottom-14 left-3 text-black border rounded-full py-4 px-40 bg-orange-500">
-            deploy
-          </button> */}
+          <button className="relative bottom-[6.5rem] left-3 text-black border rounded-full py-5 px-36 bg-green-500 justify-center"
+          onClick={()=> router.push('/driver')}>
+            Arrive
+          </button>
         </div>
       ) : (
         <div>
@@ -46,9 +47,10 @@ export default function Home() {
             alt="Picture of the author"
             className="max-w-[430px]"
           />
-          {/* <button className="absolute bottom-16 left-4 text-black border rounded-full py-6 px-44 bg-orange-500">
-            deploy
-          </button> */}
+          <button className="relative bottom-[6.5rem] left-3 text-black border rounded-full py-5 px-40 bg-green-500 justify-center"
+          onClick={()=> router.push('/driver')}>
+            Arrive
+          </button>
         </div>
       )}
     </div>
