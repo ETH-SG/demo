@@ -18,7 +18,7 @@ const User = () => {
             className="max-w-[390px]"
           />
           <button
-            className="relative left-4 bottom-28  text-black border rounded-full py-5 px-40 bg-orange-500"
+            className="relative left-4 bottom-28  text-black border rounded-full py-5 px-40 bg-green-500"
             onClick={() => router.push("/user2")}
           >
             Book
