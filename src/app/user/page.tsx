@@ -20,6 +20,14 @@ const User = () => {
   // console.log(getAllEscrow(primaryWallet));
   // }
 
+    const handleClick = () => {
+    // Run the first command (call the getAllEscrow function)
+    getAllEscrow(primaryWallet.primaryWallet);
+    
+    // Then navigate to the desired route
+    router.push("/user2");
+  };
+  
   if (width > 430) {
     return (
       <div className="h-screen flex items-center justify-center">
@@ -29,10 +37,12 @@ const User = () => {
             alt="Picture of the author"
             className="max-w-[390px]"
           />
-          <ReversifiWidget />
+          <div className="relative bottom-[160px]">
+            <ReversifiWidget />
+          </div>
           <button
-            className="relative left-4 bottom-28  text-black border rounded-full py-5 px-40 bg-green-500"
-            onClick={() => getAllEscrow(primaryWallet.primaryWallet)}
+            className="relative left-4 bottom-[140px] text-black border rounded-full py-5 px-40 bg-green-500"
+            onClick={handleClick}
           >
             Book
           </button>
@@ -40,6 +50,7 @@ const User = () => {
       </div>
     );
   }
+
 
   return (
     <div className="relative">
@@ -50,9 +61,12 @@ const User = () => {
             alt="Picture of the author"
             className="max-w-[390px]"
           />
+          <div className="relative bottom-[165px]">
+            <ReversifiWidget />
+          </div>
           <button
-            className="absolute bottom-12 left-3 text-black border rounded-full py-4 px-[162px] bg-green-500"
-            onClick={() => router.push("/user2")}
+            className="absolute bottom-28 left-3 text-black border rounded-full py-4 px-[162px] bg-green-500"
+            onClick={handleClick}
           >
             Book
           </button>
@@ -64,9 +78,12 @@ const User = () => {
             alt="Picture of the author"
             className="max-w-[430px]"
           />
+          <div className="relative bottom-[165px]">
+            <ReversifiWidget />
+          </div>
           <button
-            className="absolute bottom-12 left-4 text-[18px] text-black border rounded-full py-4 px-[180px] bg-green-500"
-            onClick={() => router.push("/user2")}
+            className="absolute bottom-[75px] left-4 text-[18px] text-black border rounded-full py-4 px-[180px] bg-green-500"
+            onClick={handleClick}
           >
             Book
           </button>
