@@ -19,7 +19,7 @@ const User = () => {
           alt="Picture of the author"
           className="max-w-[390px]"
         />
-        <div className="absolute w-80 p-5 bg-green-500 bottom-10 left-11 rounded-xl">
+        <div className="absolute w-full p-5 bg-green-500 bottom-10 rounded-xl max-w-screen">
           <p className="text-black font-bold mb-2">Pending User:</p>
           {dummyArray.length === 0 ? (
             <p className="text-black italic">No orders available</p>
@@ -47,6 +47,20 @@ const User = () => {
             alt="Picture of the author"
             className="max-w-[390px]"
           />
+          <div className="absolute w-full p-5 bg-green-500 bottom-10 rounded-xl max-w-screen">
+          <p className="text-black font-bold mb-2">Pending User:</p>
+          {dummyArray.length === 0 ? (
+            <p className="text-black italic">No orders available</p>
+          ) : (
+            <ul className="space-y-3">
+              {dummyArray.map((order, index) => (
+                <li key={index}>
+                  <Card order={order} />
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
         </div>
       ) : (
         <div>
@@ -55,6 +69,20 @@ const User = () => {
             alt="Picture of the author"
             className="max-w-[430px]"
           />
+          <div className="absolute w-full p-5 bg-green-500 bottom-10 rounded-xl max-w-screen">
+          <p className="text-black font-bold mb-2">Pending User:</p>
+          {dummyArray.length === 0 ? (
+            <p className="text-black italic">No orders available</p>
+          ) : (
+            <ul className="space-y-3">
+              {dummyArray.map((order, index) => (
+                <li key={index}>
+                  <Card order={order} />
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
         </div>
       )}
     </div>
